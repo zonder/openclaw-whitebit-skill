@@ -1,0 +1,4 @@
+interface:
+  display_name: "ClawHub WhiteBIT Trading"
+  short_description: "Manage and run WhiteBIT trading via ClawHub"
+  default_prompt: "Use $clawhub-whitebit-trading to manage and execute WhiteBIT trading workflows through ClawHub and OpenClaw with MCP-first validation."

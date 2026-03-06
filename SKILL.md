@@ -1,6 +1,17 @@
 ---
 name: clawhub-whitebit-trading
 description: Build, install, update, and run a WhiteBIT trading skill through ClawHub (clawhub.ai) for OpenClaw. Use when asked to manage WhiteBIT trading automation as a ClawHub skill and execute trades with MCP-first validation.
+metadata:
+  openclaw:
+    requires:
+      env:
+        - WHITEBIT_API_KEY
+        - WHITEBIT_API_SECRET
+      bins:
+        - clawhub
+    primaryEnv: WHITEBIT_API_SECRET
+    skillKey: whitebit
+    homepage: https://clawhub.ai/zonder/whitebit
 ---
 
 # ClawHub WhiteBIT Trading

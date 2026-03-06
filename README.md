@@ -17,6 +17,32 @@ Published skill page:
 - A WhiteBIT API key pair with the permissions you need for trading.
 - A trading MCP server configured in your OpenClaw environment.
 
+## What To Consider Before Installing
+1. Confirm credential model before live use.
+- Decide where trading credentials live:
+- In your trading MCP connector (preferred), or
+- As runtime env vars for the skill/session.
+- Never upload credentials when publishing to ClawHub.
+
+2. Confirm runtime dependencies are available.
+- Ensure `clawhub` CLI is installed and authenticated for install/publish/update flows.
+- Ensure trading MCP tools are present before attempting execution.
+
+3. Restrict autonomous execution.
+- Start with dry-run/sandbox-capable tools whenever possible.
+- Require explicit human confirmation before any live trade.
+
+4. Review publish contents.
+- Inspect local files before `clawhub publish` or `clawhub sync`.
+- Exclude secrets and local artifacts (`.env`, keys, logs, build outputs).
+
+5. Verify manifest/dependency declarations.
+- This skill declares runtime requirements in `SKILL.md` frontmatter:
+- `requires.bins`: `clawhub`
+- `requires.env`: `WHITEBIT_API_KEY`, `WHITEBIT_API_SECRET`
+- `primaryEnv`: `WHITEBIT_API_SECRET`
+- If your deployment model differs, update metadata before trusting live execution.
+
 ## Install
 
 ### Option 1: From ClawHub
@@ -41,6 +67,7 @@ clawhub update whitebit
 ## API Keys Setup (Required)
 
 You need to provide your WhiteBIT API credentials to your trading MCP server.
+This skill metadata declares `WHITEBIT_API_KEY` and `WHITEBIT_API_SECRET` as required runtime credentials.
 
 Example environment variables:
 

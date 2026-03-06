@@ -25,8 +25,8 @@ clawhub update --all
 ## Publish This Skill
 ```bash
 clawhub publish ./clawhub-whitebit-trading \
-  --slug clawhub-whitebit-trading \
-  --name "ClawHub WhiteBIT Trading" \
+  --slug whitebit \
+  --name "whitebit" \
   --version 1.0.0 \
   --tags latest
 ```

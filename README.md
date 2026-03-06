@@ -2,6 +2,9 @@
 
 MCP-first WhiteBIT trading workflow for OpenClaw, packaged as a ClawHub skill.
 
+Published skill page:
+- `https://clawhub.ai/zonder/whitebit`
+
 ## What This Skill Does
 - Guides safe trade execution (`buy`/`sell`, market/limit).
 - Validates parameters against WhiteBIT docs via MCP.
@@ -18,10 +21,16 @@ MCP-first WhiteBIT trading workflow for OpenClaw, packaged as a ClawHub skill.
 
 ### Option 1: From ClawHub
 ```bash
-clawhub install clawhub-whitebit-trading
+clawhub install whitebit
 ```
 
 Then start a new OpenClaw session so the skill is loaded.
+
+To pull latest updates later:
+
+```bash
+clawhub update whitebit
+```
 
 ### Option 2: From GitHub
 1. Clone this repository.

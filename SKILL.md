@@ -57,7 +57,7 @@ Run a ClawHub-native workflow for WhiteBIT trading automation in OpenClaw.
 
 9. Manage the skill through ClawHub when requested.
 - Search registry: `clawhub search "whitebit"`.
-- Install/update in workspace: `clawhub install <slug>`, `clawhub update <slug>`, or `clawhub update --all`.
+- Install/update in workspace: `clawhub install whitebit`, `clawhub update whitebit`, or `clawhub update --all`.
 - Publish this skill folder to ClawHub with explicit slug/version metadata.
 - Use `clawhub sync --dry-run` before bulk publish/update operations.
 
